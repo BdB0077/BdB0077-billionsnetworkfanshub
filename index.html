@@ -9,44 +9,91 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: url('tracker-cyber.jpg') no-repeat center center fixed;
+            background: url('background-event.jpg') no-repeat center center fixed;
             background-size: cover;
             color: #fff;
-            transition: background-image 0.5s ease; /* Smooth transition for background switch */
         }
-        header { 
-            background: linear-gradient(135deg, #1e3c72, #2a5298); 
-            padding: 2rem; 
+        header {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            padding: 2rem;
             text-align: center;
-            background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay for readability */
         }
-        .hero { font-size: 2.5rem; margin: 0; }
-        .network-viz { display: flex; justify-content: center; padding: 2rem; }
-        .node { width: 20px; height: 20px; background: #00ff88; border-radius: 50%; margin: 0 10px; animation: pulse 2s infinite; }
-        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
-        section { padding: 2rem; max-width: 800px; margin: auto; }
-        .embed { margin: 1rem 0; }
-        footer { text-align: center; padding: 1rem; background: #111; }
-        a { color: #00ff88; text-decoration: none; }
-        button { 
-            background: #00ff88; 
-            color: #0a0a0a; 
-            padding: 0.5rem 1rem; 
-            border: none; 
-            cursor: pointer; 
-            margin: 1rem 0; 
+        .hero {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+        .network-viz {
+            display: flex;
+            justify-content: center;
+            padding: 2rem;
+        }
+        .node {
+            width: 20px;
+            height: 20px;
+            background: #00ff88;
+            border-radius: 50%;
+            margin: 0 10px;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+        section {
+            padding: 2rem;
+            max-width: 800px;
+            margin: auto;
+        }
+        .embed {
+            margin: 1rem 0;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #111;
+        }
+        a {
+            color: #00ff88;
+            text-decoration: none;
+        }
+        button {
+            background: #00ff88;
+            color: #0a0a0a;
+            padding: 0.5rem 1rem;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            font-weight: bold;
         }
         #tracker {
-            background: url('background-event.jpg') no-repeat center center;
+            background: url('tracker-cyber.jpg') no-repeat center center;
             background-size: cover;
-            border: 1px solid #00ff88;
+            border: 2px solid #00ff88;
             border-radius: 8px;
             padding: 1rem;
             color: #fff;
-            background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
-            transition: background-image 0.5s ease; /* Smooth transition */
+            text-align: center;
         }
-        .twitter-timeline { height: 600px; overflow-y: auto; }
+        .tracker-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #00ff88;
+            color: #0a0a0a;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .twitter-timeline {
+            height: 400px;
+            overflow-y: auto;
+            border: 1px solid #00ff88;
+            border-radius: 5px;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay for readability */
+        }
     </style>
 </head>
 <body>
@@ -71,9 +118,9 @@
     <section id="tracker">
         <h2>gBillions Tracker</h2>
         <p>Track all #gBillions mentions on X in real-time! Catch community vibes, join the yap, and spot trends. Post with #gBillions to show up here! 🅱️</p>
-        <a class="twitter-timeline" data-height="600" href="https://twitter.com/search?q=gBillions%20OR%20%23gBillions%20-filter%3Areplies">gBillions Mentions on X</a> 
+        <a class="tracker-button" href="https://twitter.com/search?q=gBillions%20OR%20%23gBillions%20-filter%3Areplies" target="_blank">View gBillions Mentions on X</a>
+        <div class="twitter-timeline" data-height="400" data-chrome="noheader nofooter noborders" href="https://twitter.com/search?q=gBillions%20OR%20%23gBillions%20-filter%3Areplies"></div>
         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        <button onclick="toggleBackgrounds()">Switch Backgrounds</button>
     </section>
     
     <section id="get-involved">
@@ -87,4 +134,7 @@
     </section>
     
     <footer>
-        <p>&copy; 2025 Billions Fan
+        <p>&copy; 2025 Billions Fan Hub. Fan-made, not official. Open source on GitHub.</p>
+    </footer>
+</body>
+</html>
